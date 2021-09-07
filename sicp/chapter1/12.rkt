@@ -9,9 +9,13 @@
 ;1 4 6 4 1
 
 (define (solution a b)
-  (cond ((= a 0) 1)
-        ((= a 1))
+  (define (pascal a b)
+  (cond ((= b 1) 1)
+        ((= a b) 1)
+        (else (+ (pascal (- a 1) (- b 1)) (pascal (- a 1)  b)))
    )
+  )
+  (pascal a b)
   )
 
 (check-equal? (solution 1 1) 1)
