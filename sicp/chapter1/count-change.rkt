@@ -26,3 +26,4 @@
   )
 
 (check-equal? (count-change 100) 292)
+(check-equal? (count-change 11) 4)
